@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 //return 'ROTA B';
 //name('rotab');
 
-//Route::get('users', function (){
-//return 'OLA MUNDO!';
-//name('users');
-
+Route::view('/welcome', 'welcome' => );
 
 Route::get('/', function(){
     return view('welcome');
