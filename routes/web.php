@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 //})->name('rotab');
 Route::get('token/{token}', function($token){
     return $token;
-})->whereUuid('token');
+})->whereUuid('token')'';
 
 
 Route::get('/user/{id}/{name}', function($id =null, $name=null){
