@@ -13,18 +13,13 @@ use Illuminate\Support\Facades\Route;
 //Route::get('rota-b', function(){
     //return 'ROTA B';
 //})->name('rotab');
-Route::get('token/{token}', function($token){
-    return $token;
-})->whereUuid('token')'';
 
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::get('', function(){
+        return view('welcome');
+    })->name('users');
 
-Route::get('/user/{id}/{name}', function($id =null, $name=null){
-    return 'User '. $id. '-' .$name;
-})->where([
-    'id'=>'[0-9]+',
-    'name'=>'[A-Za-z]+'
-]);
-
-Route::get('/', function(){
-    return view('welcome');
+    Route::get('{id}', function($id){
+        return 'Hello Wolrd ' .  $id;
+    })->name('user');
 });
