@@ -13,13 +13,18 @@ use Illuminate\Support\Facades\Route;
 //Route::get('rota-b', function(){
     //return 'ROTA B';
 //})->name('rotab');
+Route::get('test', function(){
+    return 'test';
+})->middleware('signed');
 
-Route::prefix('admin')->name('admin.')->group(function(){
-    Route::get('', function(){
-        return view('welcome');
+Route::middleware('signed')->group(function(){
+    Route::get('user', function(){
+        return 'Hello World';
     })->name('users');
 
-    Route::get('{id}', function($id){
+    Route::get('user/{id}', function($id){
         return 'Hello Wolrd ' .  $id;
     })->name('user');
 });
+
+
