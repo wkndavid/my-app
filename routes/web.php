@@ -6,7 +6,11 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::middleware('userAgent')->group(function(){
+Route::get('admin', function(App\Models\User $user){
+    dd('admin');
+})->middleware('checkToken', 'userAgent');
+
+Route::middleware('userAgent',['checkToken'])->group(function(){
 
     Route::get('users', function(App\Models\User $user){
         dd('users');
