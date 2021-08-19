@@ -19,6 +19,6 @@ class CheckToken
         if($request->input('token') !== 'abc'){
         return redirect('/') ; 
         }
-        return $next($request);
+        return $next($token);
     }
 }

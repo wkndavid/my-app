@@ -10,7 +10,7 @@ Route::get('admin', function(App\Models\User $user){
     dd('admin');
 })->middleware('checkToken', 'userAgent');
 
-Route::middleware('userAgent',['checkToken'])->group(function(){
+Route::middleware(['myApp'])->group(function(){
 
     Route::get('users', function(App\Models\User $user){
         dd('users');

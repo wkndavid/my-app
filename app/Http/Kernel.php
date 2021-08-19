@@ -44,6 +44,10 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        
+        'myApp' => [        
+        \App\Http\Middleware\UserAgent::class,\App\Http\Middleware\CheckToken::class,
+        ],
     ];
 
     /**
@@ -54,9 +58,6 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'checkToken' => \App\Http\Middleware\CheckToken::class,
-        'userAgent' => \App\Http\Middleware\UserAgent::class,
-        
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
