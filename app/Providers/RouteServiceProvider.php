@@ -35,9 +35,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+<<<<<<< HEAD
         
         Route::pattern('id', '[0-9]+');
         Route::pattern('token', '[A-Za-z]+');
+=======
+>>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
         $this->configureRateLimiting();
 
         $this->routes(function () {

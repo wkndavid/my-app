@@ -14,7 +14,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
+<<<<<<< HEAD
        //\App\Http\Middleware\TrustHosts::class,
+=======
+        // \App\Http\Middleware\TrustHosts::class,
+>>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
         \App\Http\Middleware\TrustProxies::class,
         \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
@@ -30,7 +34,10 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
+<<<<<<< HEAD
             
+=======
+>>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
@@ -44,7 +51,10 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+<<<<<<< HEAD
        
+=======
+>>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
     ];
 
     /**
@@ -65,9 +75,13 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
+<<<<<<< HEAD
 
     public $middlewarePriority =[
         \App\Http\Middleware\UserAgent::class,
         \App\Http\Middleware\CheckToken::class,
     ];
 }
+=======
+}
+>>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
