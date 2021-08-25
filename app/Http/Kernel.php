@@ -14,11 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-<<<<<<< HEAD
        //\App\Http\Middleware\TrustHosts::class,
-=======
-        // \App\Http\Middleware\TrustHosts::class,
->>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
         \App\Http\Middleware\TrustProxies::class,
         \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
@@ -34,27 +30,21 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-<<<<<<< HEAD
-            
-=======
->>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
-            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\CheckToken::class,\App\Http\Middleware\UserAgent::class,
         ],
 
         'api' => [
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-<<<<<<< HEAD
-       
-=======
->>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
+        
     ];
 
     /**
@@ -65,6 +55,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'checkToken' => \App\Http\Middleware\CheckToken::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
@@ -75,13 +66,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
-<<<<<<< HEAD
 
     public $middlewarePriority =[
-        \App\Http\Middleware\UserAgent::class,
-        \App\Http\Middleware\CheckToken::class,
+        \App\Http\Middleware\CheckToken::class, \App\Http\Middleware\UserAgent::class,       
     ];
 }
-=======
-}
->>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f

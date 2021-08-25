@@ -35,12 +35,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-<<<<<<< HEAD
-        
-        Route::pattern('id', '[0-9]+');
-        Route::pattern('token', '[A-Za-z]+');
-=======
->>>>>>> b9e7022ebd04489616b79b8d272e819d796e2d9f
         $this->configureRateLimiting();
 
         $this->routes(function () {
@@ -49,7 +43,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
-            Route::middleware('web')
+            Route::middleware(['web','myApp'])
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });

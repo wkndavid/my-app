@@ -15,7 +15,7 @@ class UserAgent
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {        
+    {         
         dd($request->server('HTTP_USER_AGENT'));
         return $next($request);
     }

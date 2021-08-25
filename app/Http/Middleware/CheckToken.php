@@ -14,11 +14,13 @@ class CheckToken
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
-    {   
-        if($request->input('token') !== 'abc'){
-        return redirect($request) ; 
-        }
-        return $next($token);
+    public function handle(Request $request, Closure $next, $role_names)
+    {           
+        dd($role_names);
+        
+        //if($request->input('token') !== 'abc'){
+        //    return redirect($request) ; 
+        //}
+        return $next($request);
     }
 }
