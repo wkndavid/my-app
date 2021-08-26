@@ -6,6 +6,6 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::get('admin', function(App\Models\User $user){
+Route::get('admin', function(){
     dd('admin');
-})->middleware('checkToken');
+})->middleware('checkToken:admin');
