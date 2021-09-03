@@ -14,17 +14,10 @@ class CheckToken
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next, ...$roles)
+    public function handle(Request $request, Closure $next)
     {     
-        foreach ($roles as $role) {
-            if (auth()->user()->hasRole($role)){
-
-                return $next($request);   
-            }         
-        }         
-        //if($request->input('token') !== 'abc'){
-        //    return redirect($request) ; 
-        //}
-        return response()->json('Desculpe sem premissão!', 401);
-    }
+               
+        if($request->input('token') !== 'abc'){
+            return redirect($request) ; 
+        }
 }
