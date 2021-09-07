@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/user', function(\App\Models\User $user) {
-   dd($user);
-});
-
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
+Route::get('/users', [UserController::class, 'index']);
