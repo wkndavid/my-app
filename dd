@@ -1,0 +1,65 @@
+[33mcommit fd854364083fc42193cd7f78329e1af00dcc97f7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Fri Aug 13 22:20:31 2021 -0300
+
+    Injecao-de-depedencias
+
+[33mcommit 5b874296743ac30d2dcd9adc4fb1748e69ace9fc[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Fri Aug 13 11:21:18 2021 -0300
+
+    Fallback
+
+[33mcommit 58e093efa789e5e438a8c9933a9364169a73e046[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Fri Aug 13 11:11:29 2021 -0300
+
+    Agrupando-rotas-com-sub-dominio
+
+[33mcommit 49cc1070f9529b4c696069d80b01cf6e580878d2[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Thu Aug 12 21:50:31 2021 -0300
+
+    Agrupando-rotas-com-middleware
+
+[33mcommit 5dfda64a24fea36de14050cfd432ed0e5e3396aa[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Thu Aug 12 11:30:27 2021 -0300
+
+    Agrupando-rotas-usando-prefixo
+
+[33mcommit 22f667e0cd28eb587cdb9776ce3208945c9b457f[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Mon Aug 9 23:36:55 2021 -0300
+
+    validando-rotas
+
+[33mcommit 4b390c1ff32d2d45154f9c6361dca689bd87bc7b[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Mon Aug 9 11:35:15 2021 -0300
+
+    rotas-de-vizualizacao-laravel
+
+[33mcommit d489cb73ef56a71d0689c4c1806cef046e7853f2[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Sun Aug 8 21:30:10 2021 -0300
+
+    Routes
+
+[33mcommit 20cce36f4a55f2f4297449162facefe5f4308853[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Sat Aug 7 21:11:42 2021 -0300
+
+    Routes
+
+[33mcommit a16e3a40a8499095cf8ad75a50b6e8895469749f[m
+Author: wkndavid <workingnown@gmail.com>
+Date:   Fri Aug 6 20:53:00 2021 -0300
+
+    curso-de-laravel-e-vue-tiago-matos
+
+[33mcommit e3d4e18b35d7ee44d3d04ed97a57decf4f1e9d9c[m
+Author: David Jesus <81330560+wkndavid@users.noreply.github.com>
+Date:   Fri Aug 6 20:47:27 2021 -0300
+
+    Initial commit
