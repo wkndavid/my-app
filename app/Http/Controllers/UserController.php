@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User; 
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -10,9 +11,9 @@ class UserController extends Controller
     {
         dd('#Maaarcha!');
     }
-    public function show( $id, Request $request)
+    public function show(Request $request, User $user)
     {   
-        dd($request->query('firstname'), $id);
-        dd('Shoow!', $id);        
+        return $user;
+        dd($user);       
     }
 }
