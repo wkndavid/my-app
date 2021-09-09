@@ -10,8 +10,9 @@ class UserController extends Controller
     {
         dd('#Maaarcha!');
     }
-    public function show($id)
-    {
+    public function show( $id, Request $request)
+    {   
+        dd($request->query('firstname'), $id);
         dd('Shoow!', $id);        
     }
 }
