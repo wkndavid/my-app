@@ -8,6 +8,10 @@ class UserController extends Controller
 {
     public function index()
     {
-        dd('x');
+        dd('#Maaarcha!');
+    }
+    public function show($id)
+    {
+        dd('Shoow!', $id);        
     }
 }
