@@ -14,6 +14,7 @@ class UserAgent
      * @param  \Closure  $next
      * @return mixed
      */
+    
     public function handle(Request $request, Closure $next)
     {         
         dd('Dump and Die');
