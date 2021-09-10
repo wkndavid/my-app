@@ -16,7 +16,8 @@ class UserAgent
      */
     public function handle(Request $request, Closure $next)
     {         
-        dd($request->server('HTTP_USER_AGENT'));
+        dd('Dump and Die');
+
         return $next($request);
     }
 }

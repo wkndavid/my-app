@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+      //$this->middleware('userAgent')->only(['index', 'show']);
+      $this->middleware(function(){
+          dd('Middleware User');
+      })->only('index');
+    }
+
     public function index()
     {
         dd('#Maaarcha!');
