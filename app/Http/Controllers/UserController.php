@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-<<<<<<< HEAD
     /**
      * Display a listing of the resource.
      *
@@ -82,23 +81,5 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
-=======
-    public function __construct()
-    {
-      //$this->middleware('userAgent')->only(['index', 'show']);
-      $this->middleware(function(){
-          dd('Middleware User');
-      })->only('index');
-    }
-
-    public function index()
-    {
-        dd('#Maaarcha!');
-    }
-    public function show(Request $request, User $user)
-    {   
-        return $user;
-        dd($user);       
->>>>>>> f3e0ddba8db962c5bd37192a73ef19a0a62eeb19
     }
 }
