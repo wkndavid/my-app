@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UserController;
 
-//Route::Resource('users', UserController::class)->except('create', 'edit');
+//users/{user}/comments
+//users/{user}/comments/{comment}
 
-Route::apiResources([
-    'users' => UserController::class,
-    'posts' => UserController::class,
-    'checkout' => UserController::class,
-]);
+Route::resource('users.comments', UserController::class)->shallow();
