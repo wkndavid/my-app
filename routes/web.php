@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\CheckoutController;
+use \App\Http\Controllers\UserController;
 
-Route::get('/users', [UserController::class, 'index']);
-Route::get('/user/{user}', [UserController::class, 'show']);
-
-Route::get('/checkout/{token}', CheckoutController::class);
+Route::resource('users', UserController::class)->except(['destroy', 'show']);
