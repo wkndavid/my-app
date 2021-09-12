@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\PostController;
 
-//users/{user}/comments
-//users/{user}/comments/{comment}
-
-Route::resource('users', UserController::class)->names([
-    'create' => 'usuario.criar',
-    'update' => 'usuario.atualizar',
+Route::resource('posts.comments', PostController::class)->parameters([
+    'posts' => 'admin_post',
+    'comments' => 'admin_comments'
 ]);
