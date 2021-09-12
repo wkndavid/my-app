@@ -6,4 +6,7 @@ use \App\Http\Controllers\UserController;
 //users/{user}/comments
 //users/{user}/comments/{comment}
 
-Route::resource('users.comments', UserController::class)->shallow();
+Route::resource('users', UserController::class)->names([
+    'create' => 'usuario.criar',
+    'update' => 'usuario.atualizar',
+]);
