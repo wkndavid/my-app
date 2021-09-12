@@ -14,14 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
       //$this->middleware('userAgent')->only(['index', 'show']);
       $this->middleware(function(){
           dd('Middleware User');
       })->except('index');
-=======
-        //
->>>>>>> 212a30b9da1b27cd921012ea2c1d79a74527bdca
     }
 
     /**
