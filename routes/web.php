@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
-Route::resource('posts.comments', PostController::class)->parameters([
-    'posts' => 'admin_post',
-    'comments' => 'admin_comments'
+//Route::get('users/{user:email}', [UserController::class, 'show']);
+
+Route::resource('users', UserController::class)->scoped([
+    'user' => 'email',
 ]);
