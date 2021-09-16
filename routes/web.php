@@ -2,17 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Route::get('users/{user:email}', [UserController::class, 'show']);
 Route::get('user/{user}', function(Illuminate\Http\Request $request){
-    //dd($request);
-
-    // dd($request->path());
-    // dd($request->url());
-    // dd($request->fullUrl());
-    // dd($request->fullUrlWithQuery(['curso' => 'Laravel']));
-    // dd($request->fullUrlIs('http://127.0.0.1:8000/user?token=abc'));
-    // dd($request->is('user/*'));
-    // dd($request->routeIs('user'));
-    // dd($request->method() === 'GET')
-    dd($request->isMethod('get'));
+    //dd($request->input('token'));
+    //dd($request->input('curso', 'Laravel'));
+    //dd($request->input('product.2.versao'));
+    //dd($request->input());
+    //dd($request->query());
+    //dd($request->query('curso', 'laravel'));
+    //dd($request->token);
+    //dd($request->only('product', 'token'));
+    //dd($request->only('token'));
+    dd($request->except('product'));
 })->name('user');
