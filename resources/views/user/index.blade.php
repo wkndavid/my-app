@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Usuários</h1>
+<?php echo $user; ?>
 </body>
 </html>
