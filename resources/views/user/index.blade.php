@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Usuários</h1>
-<?php echo $user; ?>
+<?php echo $user; ?><br>
+<?php echo $user2; ?><br>
+<?php echo $userAdmin; ?>
+
 </body>
 </html>
