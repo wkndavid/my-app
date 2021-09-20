@@ -8,14 +8,7 @@ class UserController extends Controller
 {
     public function index(){
 
-        $view = view(['user.index']);
-
-        $view->with(['user' => 'Alahj Jah' ]);
-
-        $view->with(['user2' => 'Oniti Waa' ]);
-
-        $view->with(['userAdmin' => 'David jess']);
-        
+        $view = view(['user' => 'Jhon Snow']);
         return $view;
-    }    
+    }
 }
