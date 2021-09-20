@@ -8,8 +8,7 @@ class UserController extends Controller
 {
     public function index(){
 
-        return view('user.index', [
-            'user' => 'Jhon Snow',
-        ]);
+        $view = view(['user' => 'Jhon Snow']);
+        return $view;
     }
 }
