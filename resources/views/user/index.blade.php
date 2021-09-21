@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Usuários</h1>
-
+{{  dd($users) }}
 <?php 
    foreach ($users as $user)
    {
-       echo $user;
+      // echo $user;
    }
 ?>
 <br>
