@@ -8,8 +8,13 @@
 </head>
 <body>
     <h1>Usuários</h1>
-    
-{{ $user }}
 
+<?php 
+   foreach ($users as $user)
+   {
+       echo $user;
+   }
+?>
+<br>
 </body>
 </html>
