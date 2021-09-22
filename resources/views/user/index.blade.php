@@ -10,12 +10,19 @@
     <h1>Usuários</h1>
     {{ count($users) }} <br>
 
-    @foreach($users as $user)
-    
-    {{$loop->remaining}}
-       
-    {{ $user->id }} - {{ $user->name }} ({{ $user->email }})<br>   
-    @endforeach
+    @switch(5)
+        @case(1)
+            Eu tenho 1 usuário
+            @break
+        @case(5)
+            Eu tenho 5 Usuários
+            @break
+        @case(10)
+            Eu tenho 10 usuários
+            @break
+        @default
+            Eu não tenho usuários
+    @endswitch
     <br><br>
 </body>
 </html>
