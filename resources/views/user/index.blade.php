@@ -8,32 +8,29 @@
 </head>
 <body>
     <h1>Usuários</h1>
+
     {{ count($users) }} <br>
 
-    @if(count($users) === 1)
-        Eu tenho 1 usuários
-    @elseif(count($users) > 1)
-        Eu tenho vários usuários
-    @else
-        Eu não tenho usuários
-    @endif
-
-    <br><br>
-    @unless(count($users))
-        Eu não tenho Usuários
-    @endunless
-
+    @for($i = 0; $i <= count($users); $i++)
+        {{ $i }}
+    @endfor   
     <br><br>
 
-    @isset($users)
-        Variável users existe
-    @endisset
-
+    @foreach($users as $user)
+        {{$user->name}} ({{$user->email}})<br>   
+    @endforeach
     <br><br>
-    @empty($users)
-        Variável users está vazia
-    @endempty
 
+    @forelse($users as $user)
+        {{$user->name}} ({{$user->email}}) <br>
+    @empty
+        Nenhum usuário encontrado
+    @endforelse
+<br><br>
+<?php $j = 1; ?>
+@while($j <= 10)
+{{$j++}}
+@endwhile
 <br>
 </body>
 </html>
