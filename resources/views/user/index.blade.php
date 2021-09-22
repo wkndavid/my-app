@@ -8,13 +8,19 @@
 </head>
 <body>
     <h1>Usuários</h1>
+    {{ count($users) }} <br>
 
-<?php 
-   foreach ($users as $user)
-   {
-       echo $user;
-   }
-?>
-<br>
+    @foreach($users as $user)
+        @if($user->id === 4)
+            @continue
+        @endif
+
+        {{$user->id}} - {{$user->name}} ({{$user->email}})<br>   
+
+        @if($user->id === 5)
+            @break
+        @endif
+    @endforeach
+    <br><br>
 </body>
 </html>
