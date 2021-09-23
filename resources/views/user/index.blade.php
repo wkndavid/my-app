@@ -8,23 +8,12 @@
 </head>
 <body>
     
-    @include('user.heading')
+    @include('heading', [
+        'title' => 'Usuários'
+    ])
 
-    {{-- @includeIf('user.heading2') --}}
-    
-    {{--@includeWhen(true, 'user.heading')--}}
-
-    {{--@includeUnless(false, 'user.heading')--}}
-    
-    @includeFirst(['user.heading', 'user.heading2'])
-
-    {{ count($users) }} <br>
-
-    @foreach($users as $user) <br>
-   
-{{ $loop->depth }}
-    {{ $user->id }} - {{ $user->name }} ({{ $user->email }})
+    @foreach($users as $user)   
+        @include('user.user', ['user' => $user])
     @endforeach
-    <br><br>
 </body>
 </html>
