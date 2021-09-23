@@ -7,22 +7,24 @@
     <title>User</title>
 </head>
 <body>
-    <h1>Usuários</h1>
+    
+    @include('user.heading')
+
+    {{-- @includeIf('user.heading2') --}}
+    
+    {{--@includeWhen(true, 'user.heading')--}}
+
+    {{--@includeUnless(false, 'user.heading')--}}
+    
+    @includeFirst(['user.heading', 'user.heading2'])
+
     {{ count($users) }} <br>
 
-    @switch(5)
-        @case(1)
-            Eu tenho 1 usuário
-            @break
-        @case(5)
-            Eu tenho 5 Usuários
-            @break
-        @case(10)
-            Eu tenho 10 usuários
-            @break
-        @default
-            Eu não tenho usuários
-    @endswitch
+    @foreach($users as $user) <br>
+   
+{{ $loop->depth }}
+    {{ $user->id }} - {{ $user->name }} ({{ $user->email }})
+    @endforeach
     <br><br>
 </body>
 </html>
