@@ -8,17 +8,12 @@
 </head>
 <body>
     
-    @include('user.heading')
+    @include('heading', [
+        'title' => 'Usuários'
+    ])
 
-    {{-- @includeIf('user.heading2') --}}
-    
-    {{--@includeWhen(true, 'user.heading')--}}
-
-    {{--@includeUnless(false, 'user.heading')--}}
-    
-    @includeFirst(['user.heading', 'user.heading2'])
-
-    {{ count($users) }} <br>
+    @includeWhen(true, 'heading', [
+        'title'=>'Usuários When'])
 
     @foreach($users as $user) <br>
    
