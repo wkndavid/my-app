@@ -12,8 +12,10 @@
         'title' => 'Usuários'
     ])
 
-    @foreach($users as $user)   
-        @include('user.user', ['user' => $user])
-    @endforeach
+    @each('user.user', $users, 'user')    
+
+{{--    @foreach($users as $user)   --}}
+{{--    @include('user.user')   --}}
+{{--    @endforeach --}}
 </body>
 </html>
