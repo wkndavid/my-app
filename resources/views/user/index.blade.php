@@ -7,19 +7,18 @@
     <title>User</title>
 </head>
 <body>
-    <h1>Usuários</h1>
-    {{ count($users) }} <br>
+    
+    @include('heading', [
+        'title' => 'Usuários'
+    ])
 
-    @foreach($users as $user)
-        @if($user->id === 4)
-            @continue
-        @endif
+    @includeWhen(true, 'heading', [
+        'title'=>'Usuários When'])
 
-        {{$user->id}} - {{$user->name}} ({{$user->email}})<br>   
-
-        @if($user->id === 5)
-            @break
-        @endif
+    @foreach($users as $user) <br>
+   
+{{ $loop->depth }}
+    {{ $user->id }} - {{ $user->name }} ({{ $user->email }})
     @endforeach
     <br><br>
 </body>
