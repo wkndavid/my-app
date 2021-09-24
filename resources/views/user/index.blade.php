@@ -7,15 +7,19 @@
     <title>User</title>
 </head>
 <body>
-    
+    @php
+        $count = count($users);
+        
+        foreach($users as $user){
+            echo $user->name . '<br>';
+      }
+        
+    @endphp
+
     @include('heading', [
         'title' => 'Usuários'
     ])
 
-    @each('user.user', $users, 'user')    
-
-{{--    @foreach($users as $user)   --}}
-{{--    @include('user.user')   --}}
-{{--    @endforeach --}}
+    @each('user.user', $users, 'user')
 </body>
 </html>
