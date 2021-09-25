@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+@extends('layouts.default')
+
+@section('title', 'Lista de Usuários')
+
+@section('content')
+    @parent <br>
+    @each('user.user', $users, 'user')
+@endsection
+@section('sidebar')
+@parent 
+<br>
+<ul>
+    <li>Menu 1</li>
+    <li>Menu 2</li>
+    <li>Menu 3</li>
+</ul>
+@endsection
+
+
+
+
+
+{{--    @php --}}
+{{--        $count = count($users); --}}
+        
+{{--        foreach($users as $user){ --}}
+{{--            echo $user->name . '<br>'; --}}
+{{--      }
+{{--    @endphp --}}
+
+{{--    @include('heading', --}}
+{{--         'title' => 'Usuários'--}}
+{{--     ]) --}}
+{{--     @each('user.user', $users, 'user')--}}
+=======
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,3 +59,4 @@
     <br><br>
 </body>
 </html>
+>>>>>>> 98bad2707c2db5754c096562c1dda13f53a8c28d
