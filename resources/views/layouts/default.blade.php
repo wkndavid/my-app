@@ -8,15 +8,7 @@
     <title>@yield('title', 'Laravel App')</title>
 </head>
 <body>
-    @section('sidebar')
-      <ul>
-          <li>Menu Principal 1</li>
-          <li>Menu Principal 2</li>
-          <li>Menu Principal 3</li>
-      </ul>
-    @show
     <br><br>
     @yield('content')<br>
-    @stack('scripts')
 </body>
 </html>
