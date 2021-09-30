@@ -1,8 +1,11 @@
 @extends('layouts.default')
 
-@section('title', 'Lista de Usuários')
+@section('title', 'Lista de usuarios')
 
 @section('content')
-<x-user></x-user>
     @each('user.user', $users, 'user')
+@endsection
+
+@section('yield')
+    Conteúdo yield
 @endsection
